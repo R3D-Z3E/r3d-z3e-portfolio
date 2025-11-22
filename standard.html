@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="R3D_Z3E Projects - CTF Writeups, Penetration Testing, Security Research">
+    <title>Projects | R3D_Z3E</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="src/png/logo.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="src/png/logo.png" alt="R3D_Z3E Logo">
+                <span>R3D_Z3E</span>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="standard.html" class="nav-link active">Certifications</a></li>
+                <li><a href="standard2.html" class="nav-link">Projects</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Projects Hero -->
+    <section class="projects-hero">
+        <div class="container">
+            <h1 class="page-title">Projects & Writeups</h1>
+            <p class="page-subtitle">A collection of my penetration testing projects, CTF solutions, and security research</p>
+        </div>
+    </section>
+
+    <!-- Filter Tabs -->
+    <section class="projects-filter">
+        <div class="container">
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all">All</button>
+                <button class="filter-tab" data-filter="pentest">Penetration Testing</button>
+                <button class="filter-tab" data-filter="ctf">CTF Writeups</button>
+                <button class="filter-tab" data-filter="research">Security Research</button>
+                <button class="filter-tab" data-filter="tools">Tools & Scripts</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="projects-section">
+        <div class="container">
+            <div class="projects-grid" id="projectsGrid">
+                
+                <!-- Project Card 1 -->
+                <div class="project-card" data-category="pentest">
+                    <div class="project-image">
+                        <img src="src/png/logo.png" alt="Project">
+                        <div class="project-overlay">
+                            <span class="project-category">Penetration Testing</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Enterprise Network Penetration Test</h3>
+                        <p class="project-description">Complete penetration test of a corporate network infrastructure, identifying critical vulnerabilities and providing remediation strategies.</p>
+                        <div class="project-tags">
+                            <span class="tag">Network Security</span>
+                            <span class="tag">Active Directory</span>
+                            <span class="tag">Privilege Escalation</span>
+                        </div>
+                        <div class="project-meta">
+                            <span class="severity critical">Critical</span>
+                            <a href="#" class="project-link">
+                                Read More
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card" data-category="ctf">
+                    <div class="project-image">
+                        <img src="src/png/logo.png" alt="Project">
+                        <div class="project-overlay">
+                            <span class="project-category">CTF Writeup</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">HackTheBox - Machine Walkthrough</h3>
+                        <p class="project-description">Detailed walkthrough of a challenging HTB machine involving web exploitation, privilege escalation, and custom exploit development.</p>
+                        <div class="project-tags">
+                            <span class="tag">Web Exploitation</span>
+                            <span class="tag">Linux</span>
+                            <span class="tag">Python</span>
+                        </div>
+                        <div class="project-meta">
+                            <span class="severity high">High</span>
+                            <a href="#" class="project-link">
+                                Read More
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card" data-category="research">
+                    <div class="project-image">
+                        <img src="src/png/logo.png" alt="Project">
+                        <div class="project-overlay">
+                            <span class="project-category">Security Research</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Zero-Day Vulnerability Discovery</h3>
+                        <p class="project-description">Research and responsible disclosure of a critical vulnerability in a widely-used enterprise application.</p>
+                        <div class="project-tags">
+                            <span class="tag">CVE</span>
+                            <span class="tag">Zero-Day</span>
+                            <span class="tag">Responsible Disclosure</span>
+                        </div>
+                        <div class="project-meta">
+                            <span class="severity critical">Critical</span>
+                            <a href="#" class="project-link">
+                                Read More
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 4 -->
+                <div class="project-card" data-category="tools">
+                    <div class="project-image">
+                        <img src="src/png/logo.png" alt="Project">
+                        <div class="project-overlay">
+                            <span class="project-category">Tool Development</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Custom Reconnaissance Framework</h3>
+                        <p class="project-description">Python-based automated reconnaissance tool for bug bounty hunting and penetration testing engagements.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Automation</span>
+                            <span class="tag">OSINT</span>
+                        </div>
+                        <div class="project-meta">
+                            <span class="severity medium">Medium</span>
+                            <a href="#" class="project-link">
+                                View on GitHub
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 5 -->
+                <div class="project-card" data-category="ctf">
+                    <div class="project-image">
+                        <img src="src/png/logo.png" alt="Project">
+                        <div class="project-overlay">
+                            <span class="project-category">CTF Writeup</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">TryHackMe - Red Team Path</h3>
+                        <p class="project-description">Complete writeup series covering the Red Team learning path with detailed explanations and custom scripts.</p>
+                        <div class="project-tags">
+                            <span class="tag">Red Teaming</span>
+                            <span class="tag">Windows</span>
+                            <span class="tag">Post-Exploitation</span>
+                        </div>
+                        <div class="project-meta">
+                            <span class="severity high">High</span>
+                            <a href="#" class="project-link">
+                                Read More
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 6 -->
+                <div class="project-card" data-category="pentest">
+                    <div class="project-image">
+                        <img src="src/png/logo.png" alt="Project">
+                        <div class="project-overlay">
+                            <span class="project-category">Penetration Testing</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Web Application Security Assessment</h3>
+                        <p class="project-description">Comprehensive security assessment of a fintech web application, uncovering critical authentication bypasses and SQL injection vulnerabilities.</p>
+                        <div class="project-tags">
+                            <span class="tag">Web Security</span>
+                            <span class="tag">SQL Injection</span>
+                            <span class="tag">Authentication</span>
+                        </div>
+                        <div class="project-meta">
+                            <span class="severity critical">Critical</span>
+                            <a href="#" class="project-link">
+                                Read More
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 R3D_Z3E | Offensive Security. All rights reserved.</p>
+            <p class="footer-tech">Built with HTML, CSS & JavaScript</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
