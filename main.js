@@ -1,3 +1,16 @@
+// Force page to load at top on refresh
+window.addEventListener('beforeunload', function() {
+    window.scrollTo(0, 0);
+});
+
+// Also scroll to top on page load
+window.addEventListener('load', function() {
+    if (!window.location.hash) {
+        window.scrollTo(0, 0);
+    }
+});
+
+
 // ============================================
 // NAVIGATION FUNCTIONALITY
 // ============================================
