@@ -1,0 +1,28 @@
+{
+  "blogs": [
+    {
+      "title": "Basic-Pentesting",
+      "description": "Easy THM box covering enumeration and privilege escalation basics.",
+      "date": "2025-11-24",
+      "readTime": 4,
+      "category": "Security",
+      "url": "https://blog.r3d-z3e.me/posts/basic-pentesting/"
+    },
+    {
+      "title": "BILLING",
+      "description": "Box focused on enumeration and privilege escalation in a billing context.",
+      "date": "2025-11-23",
+      "readTime": 6,
+      "category": "Security",
+      "url": "https://blog.r3d-z3e.me/posts/billing/"
+    },
+    {
+      "title": "Authentication notes",
+      "description": "This blog is primarily explaining everything about authentication, authentication bypass, ATO and whatsoever.",
+      "date": "2025-11-22",
+      "readTime": 6,
+      "category": "Security",
+      "url": "https://blog.r3d-z3e.me/posts/authentication-key-notes/"
+    }
+  ]
+}

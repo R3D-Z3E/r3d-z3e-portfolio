@@ -270,3 +270,70 @@ window.addEventListener('load', () => {
         document.body.style.opacity = '1';
     }, 100);
 });
+
+// ============================================
+// FETCH LATEST BLOG POSTS FROM JSON
+// ============================================
+document.addEventListener('DOMContentLoaded', function() {
+    const blogGrid = document.getElementById('blogGrid');
+    
+    console.log('blogGrid element:', blogGrid); // DEBUG LINE
+    
+    if (blogGrid) {
+        console.log('blogGrid found, fetching posts...'); // DEBUG LINE
+        fetchBlogPosts();
+    } else {
+        console.error('blogGrid element not found!'); // DEBUG LINE
+    }
+    
+    async function fetchBlogPosts() {
+        console.log('fetchBlogPosts started'); // DEBUG LINE
+        try {
+            console.log('Fetching blogs.json...'); // DEBUG LINE
+            const response = await fetch('blogs.json');
+            console.log('Response status:', response.status); // DEBUG LINE
+            
+            const data = await response.json();
+            console.log('Data loaded:', data); // DEBUG LINE
+            
+            const posts = data.blogs.slice(0, 3);
+            
+            if (posts.length === 0) {
+                blogGrid.innerHTML = '<p class="blog-empty">No posts available yet.</p>';
+                return;
+            }
+            
+            let blogHTML = '';
+            
+            posts.forEach(post => {
+                const date = new Date(post.date);
+                const formattedDate = date.toLocaleDateString('en-US', { 
+                    month: 'short', 
+                    day: 'numeric', 
+                    year: 'numeric' 
+                });
+                
+                blogHTML += `
+                    <div class="blog-card">
+                        <div class="blog-meta">
+                            <span class="blog-category">${post.category}</span>
+                            <span class="blog-date-time">${formattedDate} • ${post.readTime} min read</span>
+                        </div>
+                        <h3 class="blog-title">
+                            <a href="${post.url}" target="_blank">${post.title}</a>
+                        </h3>
+                        <p class="blog-excerpt">${post.description}</p>
+                        <a href="${post.url}" target="_blank" class="blog-readmore">Read More →</a>
+                    </div>
+                `;
+            });
+            
+            blogGrid.innerHTML = blogHTML;
+            console.log('Blogs rendered successfully'); // DEBUG LINE
+            
+        } catch (error) {
+            console.error('Error loading blog posts:', error);
+            blogGrid.innerHTML = '<p class="blog-empty">Unable to load posts. <a href="https://blog.r3d-z3e.me" target="_blank" style="color: var(--primary-red);">Visit blog →</a></p>';
+        }
+    }
+});
