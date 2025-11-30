@@ -337,3 +337,32 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
+// ============================================
+// HANDLE CROSS-PAGE ANCHOR NAVIGATION
+// ============================================
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all links that point to home page anchors
+    const crossPageLinks = document.querySelectorAll('a[href^="/#"]');
+    
+    crossPageLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            const targetId = href.substring(2); // Remove /# to get just the ID
+            
+            // Check if we're already on the home page
+            if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+                // We're on home page, just scroll to section
+                e.preventDefault();
+                const target = document.getElementById(targetId);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            } else {
+                // We're on a different page - navigate to home with hash
+                // Let the browser handle it naturally (will go to home + scroll)
+                // No need to prevent default here
+            }
+        });
+    });
+});
